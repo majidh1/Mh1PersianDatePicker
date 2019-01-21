@@ -1,0 +1,107 @@
+﻿.datePicker {
+    border: none;
+    width: 280px;
+    direction: rtl;
+    font-size: 1.1rem;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #444;
+    border-radius: 0 0 5px 5px;
+}
+    .datePicker button {
+        background: none;
+        color: #444
+    }
+    .datePicker td:first-child {
+        padding-right: 5px;
+    }
+
+.datePickerFriDay {
+    color: #d10000;
+}
+
+.datePickerDay {
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .datePickerDay:hover {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+
+.datePickerDaySelect {
+    text-align: center;
+    cursor: pointer;
+    background-color: #00be8a;
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.datePickerToday {
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #c9c9c9;
+}
+
+.datePickerHeader td {
+    padding: 5px;
+    text-shadow: 0 0 1px #eee;
+    color: #444;
+    border-bottom: 1px solid #ccc
+}
+
+.datePickerFooter td {
+    padding-top: 10px;
+    border-top: 1px solid #ccc
+}
+
+.datePickerHeader button, .datePickerFooter button {
+    border-radius: 2px;
+    height: 25px;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.datePickerHeader button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.7rem;
+    line-height: 0;
+    vertical-align: middle;
+    border: 1px solid #ccc
+}
+
+.datePickerFooter button {
+    padding: 0px 8px 2px 8px;
+    border: 1px solid #ccc;
+    margin: 0 0 5px 5px;
+}
+
+    .datePickerHeader button:hover, .datePickerFooter button:hover {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+
+.datePickerYear, .datePickerMonth {
+    text-align: center;
+    display: inline-block;
+    height: 17px;
+    vertical-align: middle;
+}
+
+.datePickerMonth {
+    width: 60px;
+}
+
+.datePickerYear {
+    width: 45px;
+}
+
+.mh1-icon-plus, .mh1-icon-minus {
+    font-style: normal;
+    opacity: .5;
+}

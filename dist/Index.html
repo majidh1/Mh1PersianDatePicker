@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Demo Mh1PersianDatePicker</title>
+    <link href="../src/Mh1PersianDatePicker.css" rel="stylesheet" />
+    <style>
+        input {
+            width: 400px;
+            margin: 100px;
+            height: 28px;
+            background: #ccc
+        }
+    </style>
+</head>
+<body>
+    <h1>Mh1PersianDatePicker</h1>
+
+    <input type="text" onclick="Mh1PersianDatePicker.Show(this,'1397/12/21')" placeholder="onclick" />
+    <input type="text" onfocus="Mh1PersianDatePicker.Show(this,'1397/12/21')" placeholder="onfocus" />
+    <input type="text" mh1pdp placeholder="script1" />
+    <input type="text" anyattr placeholder="script2" />
+
+    <script src="../src/Mh1PersianDatePicker.js"></script>
+    <script>
+        //script1
+        var inputs = document.querySelectorAll("input[mh1pdp]");
+        for (i = 0; i < inputs.length; i++) {
+            (function (i) {
+                inputs[i].addEventListener('click', function () {
+                    Mh1PersianDatePicker.Show(this, '1397/12/21');
+                });
+            })(i);
+        }
+        //script1
+    </script>
+    <script>
+        //script2
+        var inputs = document.querySelectorAll("input[anyattr]");
+        for (i = 0; i < inputs.length; i++) {
+            (function (i) {
+                inputs[i].addEventListener('focus', function () {
+                    Mh1PersianDatePicker.Show(this, '1397/12/21');
+                });
+            })(i);
+        }
+        //script2
+    </script>
+</body>
+</html>
