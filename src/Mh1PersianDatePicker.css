@@ -61,9 +61,8 @@
 
 .datePickerHeader button, .datePickerFooter button {
     border-radius: 2px;
-    height: 25px;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -80,6 +79,7 @@
     padding: 0px 8px 2px 8px;
     border: 1px solid #ccc;
     margin: 0 0 5px 5px;
+    font-family: inherit;
 }
 
     .datePickerHeader button:hover, .datePickerFooter button:hover {

@@ -1,0 +1,15 @@
+﻿@font-face {
+    font-family: 'MAjidH1';
+    src: url('../fonts/Vazir-Medium-FD-WOL.eot');
+    src: url('../fonts/Vazir-Medium-FD-WOL.eot?#iefix') format('embedded-opentype'), url('../fonts/Vazir-Medium-FD-WOL.woff2') format('woff2'), url('../fonts/Vazir-Medium-FD-WOL.woff') format('woff'), url('../fonts/Vazir-Medium-FD-WOL.ttf') format('truetype');
+    font-weight: normal;
+}
+body {
+    font-family: 'MAjidH1'
+}
+input {
+    width: 400px;
+    margin: 100px;
+    height: 28px;
+    background: #ccc
+}
