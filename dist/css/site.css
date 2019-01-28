@@ -8,8 +8,9 @@ body {
     font-family: 'MAjidH1'
 }
 input {
-    width: 400px;
-    margin: 100px;
+    width: 400px;   
+    max-height: 100%;
+    margin: 5%;
     height: 28px;
     background: #ccc
 }

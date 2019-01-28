@@ -1,6 +1,6 @@
 ﻿.datePicker {
     border: none;
-    width: 280px;
+    width: 300px;
     direction: rtl;
     font-size: 1rem;
     background-color: #fff;
@@ -55,7 +55,7 @@
 }
 
 .datePickerFooter td {
-    padding-top: 10px;
+    padding-top: 5px;
     border-top: 1px solid #ccc
 }
 
@@ -94,11 +94,11 @@
 }
 
 .datePickerMonth {
-    width: 60px;
+    width: 70px;
 }
 
 .datePickerYear {
-    width: 45px;
+    width: 47px;
 }
 
 .mh1-icon-plus, .mh1-icon-minus {
