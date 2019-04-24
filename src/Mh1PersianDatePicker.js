@@ -1,7 +1,7 @@
 ﻿// Mh1PersianDatePicker
 // Copyright (c) majid hooshiyar(MAjidH1). All rights reserved.
 // Licensed under the MIT License. See License in the project root for license information.
-// @version 0.8.2
+// @version 0.8.3
 // 
 
 var Mh1PersianDatePicker = function() {
