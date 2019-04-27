@@ -4,7 +4,7 @@
 // @version 0.8.3
 // 
 
-var Mh1PersianDatePicker = function() {
+var Mh1PersianDatePicker = function () {
     var _dayName = new Array("شنبه",
         "یکشنبه",
         "دوشنبه",
@@ -37,10 +37,10 @@ var Mh1PersianDatePicker = function() {
         _datePickerStyle = _datePicker.style;
         _datePickerStyle.position = "absolute";
         _datePickerStyle.zIndex = 10000000;
-        _datePicker.onmousedown = function() {
+        _datePicker.onmousedown = function () {
             _clicked = true;
         };
-        _datePicker.onclick = function() {
+        _datePicker.onclick = function () {
             _textBox.focus();
         };
     }
@@ -49,13 +49,13 @@ var Mh1PersianDatePicker = function() {
         _datePickerStyle.visibility = "hidden";
     }
 
-    this.show = function(textBox, today) {
+    this.show = function (textBox, today) {
         if (_datePicker === null) {
             init();
         }
         _today = today;
         _textBox = textBox;
-        _textBox.onblur = function() {
+        _textBox.onblur = function () {
             if (!_clicked) {
                 hide();
             }
@@ -81,9 +81,8 @@ var Mh1PersianDatePicker = function() {
         _textBox.value = date;
         _textBox.focus();
         hide();
-        if (_textBox.onchange) {
-            _textBox.onchange();
-        }
+
+        _textBox.dispatchEvent(new Event('change'));
     }
 
     function changeDay(date, day) {
@@ -114,7 +113,7 @@ var Mh1PersianDatePicker = function() {
 
         var button = createElement("button", td);
         setInnerHTML(button, "<span class='mh1-icon-plus'>+</span>");
-        button.onclick = function() { draw(nextMonth(date)); };
+        button.onclick = function () { draw(nextMonth(date)); };
 
         var span = createElement("span", td);
         setInnerHTML(span, _monthName[date.substring(5, 7) - 1]);
@@ -130,7 +129,7 @@ var Mh1PersianDatePicker = function() {
 
         button = createElement("button", td);
         setInnerHTML(button, "<span class='mh1-icon-plus'>+</span>");
-        button.onclick = function() { draw(nextYear(date)); };
+        button.onclick = function () { draw(nextYear(date)); };
 
         span = createElement("span", td);
         setInnerHTML(span, date.substring(0, 4));
@@ -160,7 +159,7 @@ var Mh1PersianDatePicker = function() {
                     else if (cellDate === _today)
                         cellClassName = "datePickerToday";
                     setClassName(td, cellClassName);
-                    td.onclick = function() { setValue(changeDay(date, this.innerHTML)); };
+                    td.onclick = function () { setValue(changeDay(date, this.innerHTML)); };
                 }
             }
         }
@@ -173,7 +172,7 @@ var Mh1PersianDatePicker = function() {
 
         button = createElement("button", td);
         setInnerHTML(button, "امروز");
-        button.onclick = function() { setValue(_today); };
+        button.onclick = function () { setValue(_today); };
 
         td = createElement("td", tr);
         td.colSpan = 5;
@@ -181,7 +180,7 @@ var Mh1PersianDatePicker = function() {
 
         button = createElement("button", td);
         setInnerHTML(button, "خالی");
-        button.onclick = function() { setValue(""); };
+        button.onclick = function () { setValue(""); };
     }
 
     function nextYear(date) {
