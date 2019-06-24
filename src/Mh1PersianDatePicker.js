@@ -31,6 +31,7 @@ var Mh1PersianDatePicker = function () {
     var _textBox = null;
     var _datePickerStyle = null;
     var _clicked = false;
+    var _holidays = [];
 
     function init() {
         _datePicker = createElement("div", document.body);
@@ -49,7 +50,7 @@ var Mh1PersianDatePicker = function () {
         _datePickerStyle.visibility = "hidden";
     }
 
-    this.show = function (textBox, today) {
+    this.show = function (textBox, today, holidays) {
         if (_datePicker === null) {
             init();
         }
@@ -61,7 +62,7 @@ var Mh1PersianDatePicker = function () {
             }
             _clicked = false;
         };
-
+        _holidays = holidays ? holidays : [];
         var left = 0;
         var top = 0;
         var parent = _textBox;
@@ -141,8 +142,11 @@ var Mh1PersianDatePicker = function () {
 
         for (var row = 0; row < 7; row++) {
             tr = table.insertRow(row + 1);
+            if (row === 5)
+                setClassName(tr, "datePickerThuDay");
             if (row === 6)
                 setClassName(tr, "datePickerFriDay");
+
             else if (mod(row, 2) !== 1)
                 setClassName(tr, "datePickerRow");
             td = createElement("td", tr);
@@ -158,6 +162,8 @@ var Mh1PersianDatePicker = function () {
                         cellClassName = "datePickerDaySelect";
                     else if (cellDate === _today)
                         cellClassName = "datePickerToday";
+                    if (_holidays.indexOf(cellDate)>-1)
+                        cellClassName += " dateHoliday";
                     setClassName(td, cellClassName);
                     td.onclick = function () { setValue(changeDay(date, this.innerHTML)); };
                 }
@@ -270,6 +276,6 @@ var Mh1PersianDatePicker = function () {
 };
 var _mh1PersianDatePicker = new Mh1PersianDatePicker();
 
-Mh1PersianDatePicker.Show = function (textBox, today) {
-    _mh1PersianDatePicker.show(textBox, today);
+Mh1PersianDatePicker.Show = function (textBox, today, holidays) {
+    _mh1PersianDatePicker.show(textBox, today, holidays);
 };

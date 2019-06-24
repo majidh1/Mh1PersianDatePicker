@@ -18,7 +18,7 @@
         padding-right: 5px;
     }
 
-.datePickerFriDay {
+.datePickerFriDay, .dateHoliday{
     color: #d10000;
 }
 

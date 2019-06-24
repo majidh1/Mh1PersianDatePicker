@@ -14,23 +14,25 @@
 <body>
     <h1>Mh1PersianDatePicker</h1>
 
-    <input type="text" onclick="Mh1PersianDatePicker.Show(this,'1397/12/21')" placeholder="onclick" />
-    <input type="text" onfocus="Mh1PersianDatePicker.Show(this,'1397/12/21')" placeholder="onfocus" />
-    <input type="text" mh1pdp placeholder="script1" />
-    <input type="text" anyattr placeholder="script2" />
+    <input type="text" onclick="Mh1PersianDatePicker.Show(this,'1398/01/21',window.holydays)" placeholder="onclick with holydays" />
+    <input type="text" onfocus="Mh1PersianDatePicker.Show(this,'1398/01/21',)" placeholder="onfocus without holydays" />
+    <input type="text" mh1pdp placeholder="script1 with holydays" />
+    <input type="text" anyattr placeholder="script2 without holydays" />
 
 
     <!--Mh1PersianDatePicker-->
     <script src="../src/Mh1PersianDatePicker.js"></script>
     <!--Mh1PersianDatePicker-->
-
+<script>
+    window.holydays = ["1398/01/01", "1398/01/02", "1398/01/03", "1398/01/04", "1398/01/12", "1398/01/13", "1398/01/14"];
+</script>
     <script>
         //script1
         var inputs = document.querySelectorAll("input[mh1pdp]");
         for (i = 0; i < inputs.length; i++) {
             (function (i) {
                 inputs[i].addEventListener('click', function () {
-                    Mh1PersianDatePicker.Show(this, '1397/12/21');
+                    Mh1PersianDatePicker.Show(this, '1398/01/21', window.holydays);
                 });
             })(i);
         }
@@ -42,11 +44,11 @@
         for (i = 0; i < inputs.length; i++) {
             (function (i) {
                 inputs[i].addEventListener('focus', function () {
-                    Mh1PersianDatePicker.Show(this, '1397/12/21');
+                    Mh1PersianDatePicker.Show(this, '1398/01/21');
                 });
             })(i);
         }
-                //script2
+        //script2
     </script>
 </body>
 </html>
