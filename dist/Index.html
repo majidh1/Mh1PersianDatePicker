@@ -14,17 +14,17 @@
 <body>
     <h1>Mh1PersianDatePicker</h1>
 
-    <input type="text" onclick="Mh1PersianDatePicker.Show(this,'1398/01/21',window.holydays)" placeholder="onclick with holydays" />
-    <input type="text" onfocus="Mh1PersianDatePicker.Show(this,'1398/01/21',)" placeholder="onfocus without holydays" />
-    <input type="text" mh1pdp placeholder="script1 with holydays" />
-    <input type="text" anyattr placeholder="script2 without holydays" />
+    <input type="text" onclick="Mh1PersianDatePicker.Show(this,'1398/01/21',window.holidays)" placeholder="onclick with holidays" />
+    <input type="text" onfocus="Mh1PersianDatePicker.Show(this,'1398/01/21',)" placeholder="onfocus without holidays" />
+    <input type="text" mh1pdp placeholder="script1 with holidays" />
+    <input type="text" anyattr placeholder="script2 without holidays" />
 
 
     <!--Mh1PersianDatePicker-->
     <script src="../src/Mh1PersianDatePicker.js"></script>
     <!--Mh1PersianDatePicker-->
 <script>
-    window.holydays = ["1398/01/01", "1398/01/02", "1398/01/03", "1398/01/04", "1398/01/12", "1398/01/13", "1398/01/14"];
+    window.holidays = ["1398/01/01", "1398/01/02", "1398/01/03", "1398/01/04", "1398/01/12", "1398/01/13", "1398/01/14"];
 </script>
     <script>
         //script1
@@ -32,7 +32,7 @@
         for (i = 0; i < inputs.length; i++) {
             (function (i) {
                 inputs[i].addEventListener('click', function () {
-                    Mh1PersianDatePicker.Show(this, '1398/01/21', window.holydays);
+                    Mh1PersianDatePicker.Show(this, '1398/01/21', window.holidays);
                 });
             })(i);
         }
