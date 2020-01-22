@@ -17,6 +17,6 @@
 2- حال برای فعال سازی فقط کافی است متد زیر را فراخوانی کنید
 ```html
 <script>
-	Mh1PersianDatePicker.Show(this, '1397/12/21'); //parameter1: input, parameter2: today
+	Mh1PersianDatePicker.Show(this, '1397/12/21',['1397/12/29','1397/12/28']); //parameter1: input, parameter2: today, parameter3: holidays
 </script>
 ```
