@@ -1,5 +1,7 @@
 ﻿<div dir="rtl">
 
+### این پروژه دیگر پشتیبانی نمی‌شود با استفاده از لینک زیر میتوانید از نسخه جدید استفاده کنید (https://github.com/majidh1/JalaliDatePicker) 
+	
 ## مشاهده دمو - [DEMO](http://projects.radoo.ir/Mh1PersianDatePicker/)
 ![image](demo/demo.png)
 
